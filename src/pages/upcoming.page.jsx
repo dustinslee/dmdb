@@ -1,6 +1,5 @@
 import './upcoming.page.css';
 import React, { useEffect, useState } from "react";
-import { getFilmStats } from "../helpers/film.helpers";
 import { Link } from "react-router-dom";
 
 export default function UpcomingPage() {
@@ -9,15 +8,13 @@ export default function UpcomingPage() {
   function getFilms() {
     fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=463eea99b30cfafd8b6bc84a75129e9c&language=en-US&page=1`)
     .then(res => res.json())
-    .then(data => {
-      console.log(data);
-      setList(data.results)
-    })
+    .then(data => setList(data.results))
     .catch(error => console.error(error));
   }
 
   useEffect(() => getFilms(),[]);
 
+  //TO-DO: Refactor below, it is being used multiple times throughout app
   return (
     <div className="films-list-container">
       <div className="films-list-header">

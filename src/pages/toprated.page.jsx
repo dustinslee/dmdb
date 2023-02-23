@@ -20,6 +20,7 @@ export default function TopRatedPage(props) {
 
   let {avg_score, total, latest} = getFilmStats(list);
 
+  //TO-DO: Refactor below, it is being used multiple times throughout app
   return (
     <div className="films-list-container">
       <div className="films-list-header">

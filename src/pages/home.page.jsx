@@ -4,17 +4,14 @@ import { Link } from "react-router-dom";
 
 export default function HomePage(props) {
   const[movieData, setMovieData] = useState([]);
-  const [list, setList] = useState(["ready","set","go"]);
-  const [text, setText] = useState("");
+  // const [list, setList] = useState(["ready","set","go"]);
+  // const [text, setText] = useState("");
 
 
   function getMovieData() {
     fetch("https://api.themoviedb.org/3/trending/movie/day?api_key=463eea99b30cfafd8b6bc84a75129e9c")
     .then(res => res.json())
-    .then(data => {
-      setMovieData(data.results)
-      console.log(data.results);
-    })
+    .then(data => setMovieData(data.results))
     .catch(err => console.error(err));
   }
 
@@ -28,6 +25,8 @@ export default function HomePage(props) {
   //   setText("");
   // }
 
+  //TO-DO: Refactor below, it is being used multiple times throughout app
+  // Move search bar into nav bar
   return (
     <div className="homepage-container">
       <h1>Trending Movies This Week</h1>
