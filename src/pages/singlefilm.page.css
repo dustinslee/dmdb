@@ -1,0 +1,42 @@
+.singlefilm-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+}
+
+.singlefilm-page-header {
+  margin-bottom: 1em;
+}
+
+.img-container > img{
+  width: auto;
+}
+
+.film-info-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.film-info-container > h2 {
+  margin: .5em 0;
+}
+
+#rotten-tomatoes-link {
+  color: skyblue;
+}
+
+#description-body {
+  max-width: 80%;
+}
+
+@media only screen and (max-width: 600px) {
+  .img-container > img {
+    width: 100%;
+  }
+
+  #description-body {
+    max-width: 100%;
+  }
+}

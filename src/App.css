@@ -1,3 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color:#282c34;
+  color: white;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +45,78 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navbar {
+  display: flex;
+  justify-content: left;
+  padding: 1em;
+  background-color: #1d1f25;
+  gap: 2em;
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  gap: 1em;
+}
+
+.navbar ul li a {
+  color: white !important;
+}
+
+.films-list-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 1.5em;
+}
+
+.films-list-header {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 1em 0 1em;
+}
+
+.films-list-header > h1 {
+  margin-bottom: .5em;
+}
+
+.films-list-header form {
+  margin: 1em;
+}
+
+.list-with-pic {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 1em 1em 1em;
+  gap: 1em;
+}
+
+.remove-bullet {
+  list-style-type: none;
+}
+
+.film-list-container {
+  flex: 1;
+  margin-top: 2em;
+}
+
+.film-list-container > a {
+  color: white;
+}
+
+.loading {
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .film-list-container > a > img {
+    width: 100%;
+  }
+}
+
+#navbar-logo > a{
+  text-decoration: none;
 }

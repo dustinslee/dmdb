@@ -1,0 +1,13 @@
+.homepage-container {
+  margin: 1em;
+  text-align: center;
+}
+
+.homepage-container h1, form {
+  margin-bottom: 1em;
+}
+
+.list {
+  display: inline-block;
+  padding: 1em;
+}
